@@ -1,0 +1,15 @@
+{
+  "name": "test_appman",
+  "version": "1.0.0",
+  "description": "For anyone who accept this challenge, you have to write the program in any language that can retrieve mixed both numerical and alphabetical character and return only the numerical value in interger format.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
