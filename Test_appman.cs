@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,21 +7,37 @@ using System.Threading.Tasks;
 
 namespace Test_appman
 {
-    class Test_appman
+    class Program
     {
         static void Main(string[] args)
         {
-            string input = "abc573";
+            string str1 = "abc573";
+            string str2 = "a5b7c3";
 
-            string replacedqm = Regex.Replace(input, "[a-z]", " ");
+            StringBuilder Output1 = new StringBuilder();
+            StringBuilder Output2 = new StringBuilder();
+            
+            for (int i = 0; i < str1.Length; i++)
+            {
+                if (Char.IsNumber(str1[i]))
+                {
+                    Output1.Append(str1[i]);
+                }
 
-            Console.WriteLine(replacedqm.Replace(" ", String.Empty));
 
-            string input2 = "a5b7c3";
+            }
+            for (int i = 0; i < str2.Length; i++)
+            {
+                if (Char.IsNumber(str2[i]))
+                {
+                    Output2.Append(str2[i]);
+                }
 
-            string replacedqm2 = Regex.Replace(input, "[a-z]", " ");
 
-            Console.WriteLine(replacedqm2.Replace(" ", String.Empty));
+            }
+
+            Console.WriteLine(Output1);
+            Console.WriteLine(Output2);
 
         }
     }
