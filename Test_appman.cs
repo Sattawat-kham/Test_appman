@@ -1,50 +1,47 @@
-using System;;
+using System;
 using System.Text;
+
 
 namespace ConsoleApplication1
 {
     public class Program
     {
+
         public static void Main(string[] args)
         {
-            string str1 = "abc573";
-            string str2 = "a5b7c3";
 
-            StringBuilder Output1 = new StringBuilder();
-            StringBuilder Output2 = new StringBuilder();
+            Console.WriteLine("input String:");
+            string input = Console.ReadLine();
+            Console.WriteLine("input is: " + input);
 
-            for (int i = 0; i < str1.Length; i++)
+            var output = subString(input);
+
+            Console.WriteLine(output + "  Type ->  " + output.GetType());
+        }
+        public static int subString(string str)
+        {
+
+            StringBuilder reSult = new StringBuilder();
+
+            for (int i = 0; i < str.Length; i++)
             {
-                if (Char.IsNumber(str1[i]))
+                if (Char.IsNumber(str[i]))
                 {
-                    Output1.Append(str1[i]);
+                    reSult.Append(str[i]);
                 }
-
-
-            }
-            for (int i = 0; i < str2.Length; i++)
-            {
-                if (Char.IsNumber(str2[i]))
-                {
-                    Output2.Append(str2[i]);
-                }
-
 
             }
 
-            string str3 = Output1.ToString();
-            string str4 = Output2.ToString();
+            string outPut = reSult.ToString();
             int j = 0;
             int myNumber1 = 0;
-            int myNumber2 = 0;
             string strReverse = String.Empty;
 
 
-            foreach (char temp in str3)
+            foreach (char temp in outPut)
             {
                 strReverse = temp + strReverse;
             }
-
             foreach (char temp in strReverse)
             {
                 int i = temp - 48;
@@ -52,38 +49,20 @@ namespace ConsoleApplication1
                 j++;
             }
 
-            j = 0;
-            strReverse = String.Empty;
-
-            foreach (char temp in str4)
-            {
-                strReverse = temp + strReverse;
-            }
-
-            foreach (char temp in strReverse)
-            {
-                int i = temp - 48;
-                myNumber2 = myNumber2 + i * myPower(10, j);
-                j++;
-            }
-
-
-            Console.WriteLine(myNumber1 + " Type -> " + myNumber1.GetType());
-            Console.WriteLine(myNumber2 + " Type -> " + myNumber2.GetType());
-            Console.ReadLine();
-
+            return myNumber1;
 
         }
 
-        private static int myPower(int i, int j)
+        public static int myPower(int i, int j)
         {
             int final = 1;
             for (int loop = 0; loop < j; loop++)
             {
                 final = final * i;
-            }              
+            }
             return final;
         }
+
     }
 
 }
