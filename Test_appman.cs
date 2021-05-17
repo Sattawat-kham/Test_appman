@@ -10,12 +10,13 @@ namespace ConsoleApplication1
         public static void Main(string[] args)
         {
 
-            Console.WriteLine("input String:");
+            Console.Write("input String:");
             string input = Console.ReadLine();
             Console.WriteLine("input is: " + input);
 
             var output = subString(input);
 
+            Console.WriteLine("-----------------------------------------------");
             Console.WriteLine(output + "  Type ->  " + output.GetType());
         }
         public static int subString(string str)
