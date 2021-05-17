@@ -82,8 +82,9 @@ namespace ConsoleApplication1
         private static int myPower(int i, int j)
         {
             int final = 1;
-            for (int loop = 0; loop < j; loop++)
+            for (int loop = 0; loop < j; loop++){
                 final = final * i;
+            }
             return final;
         }
     }
