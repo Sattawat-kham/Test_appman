@@ -72,8 +72,8 @@ namespace ConsoleApplication1
             }
 
 
-            Console.WriteLine(myNumber1);
-            Console.WriteLine(myNumber2);
+            Console.WriteLine(myNumber1 + " Type -> " + myNumber1.GetType());
+            Console.WriteLine(myNumber2 + " Type -> " + myNumber2.GetType());
             Console.ReadLine();
 
 
@@ -84,8 +84,8 @@ namespace ConsoleApplication1
             int final = 1;
             for (int loop = 0; loop < j; loop++)
             {
-              final = final * i;
-            }
+                final = final * i;
+            }              
             return final;
         }
     }
